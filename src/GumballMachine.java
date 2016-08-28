@@ -74,7 +74,7 @@ public class GumballMachine {
     }
 
     // 发放糖果
-    public void dispense() {
+    private void dispense() {
         switch (state) {
             case HAS_QUARTER:
                 System.out.println("No gumball dispensed");
@@ -98,11 +98,15 @@ public class GumballMachine {
     }
 
     public String toString() {
-        String result;
-        result = "\nMighty Gumball Inc.\n";
-        result = result + "Java-enabled Standing Gumball Model #2016\n";
+        String result = "\n";
+        //result = result + "Mighty Gumball Inc.\n";
+        //result = result + "Java-enabled Standing Gumball Model #2016\n";
         result = result + "Inventory: " + count + " gumballs\n";
-        result = result + "Machine is waiting for quarter\n";
+        if (count > 0) {
+            result = result + "Machine is waiting for quarter\n";
+        } else {
+            result = result + "Machine is sold out";
+        }
         return result;
     }
 
