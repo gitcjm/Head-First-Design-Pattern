@@ -129,6 +129,7 @@ public class GumballMachine {
         this.count = this.count + count;
         if (count > 0) {
             state = NO_QUARTER;
+            System.out.println("\nGumball machine is refilled " + count + " gumballs");
         }
     }
 
