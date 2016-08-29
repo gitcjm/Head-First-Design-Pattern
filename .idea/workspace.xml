@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GumballMachine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GumballMachine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GumballMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78466076">
+            <state vertical-scroll-proportion="0.0">
               <caret line="131" column="76" selection-start-line="131" selection-start-column="76" selection-end-line="131" selection-end-column="76" />
               <folding>
                 <element signature="docComment;class#GumballMachine#0" expanded="false" />
@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GumballMachineTestDrive.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GumballMachineTestDrive.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GumballMachineTestDrive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.81120944">
+              <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
               <folding>
                 <element signature="docComment;class#GumballMachineTestDrive#0" expanded="false" />
               </folding>
@@ -64,8 +64,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/GumballMachineTestDrive.java" />
         <option value="$PROJECT_DIR$/src/GumballMachine.java" />
+        <option value="$PROJECT_DIR$/src/GumballMachineTestDrive.java" />
       </list>
     </option>
   </component>
@@ -443,15 +443,15 @@
       <workItem from="1472352765995" duration="1852000" />
       <workItem from="1472368975231" duration="1903000" />
       <workItem from="1472434340940" duration="6394000" />
-      <workItem from="1472463713816" duration="1408000" />
+      <workItem from="1472463713816" duration="2059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23064000" />
+    <option name="totallyTimeSpent" value="23715000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="27" width="1293" height="741" extended-state="7" />
+    <frame x="73" y="27" width="1293" height="741" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -665,22 +665,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GumballMachineTestDrive.java">
+    <entry file="file://$PROJECT_DIR$/src/GumballMachine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+          <caret line="131" column="76" selection-start-line="131" selection-start-column="76" selection-end-line="131" selection-end-column="76" />
           <folding>
-            <element signature="docComment;class#GumballMachineTestDrive#0" expanded="false" />
+            <element signature="docComment;class#GumballMachine#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GumballMachine.java">
+    <entry file="file://$PROJECT_DIR$/src/GumballMachineTestDrive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78466076">
-          <caret line="131" column="76" selection-start-line="131" selection-start-column="76" selection-end-line="131" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.81120944">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
           <folding>
-            <element signature="docComment;class#GumballMachine#0" expanded="false" />
+            <element signature="docComment;class#GumballMachineTestDrive#0" expanded="false" />
           </folding>
         </state>
       </provider>

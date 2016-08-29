@@ -39,7 +39,7 @@ public class GumballMachineTestDrive {
 
         System.out.println(gumballMachine);
 
-        gumballMachine.refill(9);
+        gumballMachine.refill(8);
 
         System.out.println(gumballMachine);
 
