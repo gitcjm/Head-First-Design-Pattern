@@ -7,6 +7,8 @@ public class GumballMachine {
     final static int NO_QUARTER = 1;
     final static int HAS_QUARTER = 2;
     final static int SOLD = 3;
+    // 转动曲柄,同时参与抽奖
+    final static int WIN = 4;
 
     int state = SOLD_OUT;
     int count = 0;
@@ -33,6 +35,10 @@ public class GumballMachine {
                 break;
             case SOLD:
                 System.out.println("Please wait, we're already giving you a gumball");
+                break;
+            case WIN:
+                System.out.print("You can't insert another quarter");
+                break;
         }
     }
 
@@ -51,10 +57,14 @@ public class GumballMachine {
                 break;
             case SOLD:
                 System.out.println("Sorry, you already turned the crank");
+                break;
+            case WIN:
+                System.out.print("Sorry, you already turned the crank, and already get a winning!");
+                break;
         }
     }
 
-    // 转动曲柄，开始售出糖果
+    // 转动曲柄，开始售出糖果, 同时也参与了抽奖
     public void turnCrank() {
         switch (state) {
             case HAS_QUARTER:
@@ -69,7 +79,13 @@ public class GumballMachine {
                 System.out.println("You turned but there's no gumballs");
                 break;
             case SOLD:
-                System.out.println("Turning twice dosen't get you another gumball!");
+                System.out.println("Turning twice doesn't get you another gumball!");
+                break;
+            case WIN:
+                System.out.println("You turned..., and get a winning!");
+                state = SOLD;
+                dispense();
+                break;
         }
     }
 
@@ -94,6 +110,25 @@ public class GumballMachine {
                 } else {
                     state = NO_QUARTER;
                 }
+                break;
+            case WIN:
+                System.out.println("Two gumball comes rolling out the slot");
+                count = count - 2;
+                if (count <= 0) {
+                    System.out.println("Oops, out of gumballs");
+                    state = SOLD_OUT;
+                } else {
+                    state = NO_QUARTER;
+                }
+                break;
+        }
+    }
+
+    // 重填糖果
+    public void refill(int count) {
+        this.count = this.count + count;
+        if (count > 0) {
+            state = NO_QUARTER;
         }
     }
 
