@@ -1,5 +1,9 @@
 # learn Head First Design Pattern .gitignore file
 # cjm @ 2016-8-28
 
-# targe files
+# IntelliJ Idea
+.idea/
 out/
+*.ipr
+*.iws
+*.iml
