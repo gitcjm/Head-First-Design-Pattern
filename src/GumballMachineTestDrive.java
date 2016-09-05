@@ -1,5 +1,3 @@
-import javax.sound.midi.SysexMessage;
-
 /**
  * Created by cjm on 8/26/16.
  */
@@ -12,13 +10,11 @@ public class GumballMachineTestDrive {
 
         gumballMachine.insertQuarter();
         gumballMachine.turnCrank();
-
         System.out.println(gumballMachine);
 
         gumballMachine.insertQuarter();
         gumballMachine.ejectQuarter();
         gumballMachine.turnCrank();
-
         System.out.println(gumballMachine);
 
         gumballMachine.insertQuarter();
@@ -26,7 +22,6 @@ public class GumballMachineTestDrive {
         gumballMachine.insertQuarter();
         gumballMachine.turnCrank();
         gumballMachine.ejectQuarter();
-
         System.out.println(gumballMachine);
 
         gumballMachine.insertQuarter();
@@ -36,16 +31,9 @@ public class GumballMachineTestDrive {
         gumballMachine.turnCrank();
         gumballMachine.insertQuarter();
         gumballMachine.turnCrank();
-
         System.out.println(gumballMachine);
 
         gumballMachine.refill(8);
-        System.out.println(gumballMachine);
-
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-
-        gumballMachine.refill(4);
         System.out.println(gumballMachine);
 
         gumballMachine.insertQuarter();
