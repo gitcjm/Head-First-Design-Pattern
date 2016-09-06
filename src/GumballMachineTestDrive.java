@@ -1,43 +1,27 @@
 /**
- * Created by cjm on 8/26/16.
+ * Created by cjm on 9/6/16.
  */
 public class GumballMachineTestDrive {
 
     public static void main(String[] args) {
-        GumballMachine gumballMachine = new GumballMachine(5);
+        int count = 0;
 
-        System.out.println(gumballMachine);
+        if (args.length < 2) {
+            System.out.println("GumballMachine <name> <inventory>");
+            System.exit(1);
+        }
 
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        System.out.println(gumballMachine);
+        // 糖果机
+        count = Integer.parseInt(args[1]);
+        GumballMachine gumballMachine = new GumballMachine(args[0], count);
+        // 糖果机监视器
+        GumballMonitor monitor = new GumballMonitor(gumballMachine);
 
-        gumballMachine.insertQuarter();
-        gumballMachine.ejectQuarter();
-        gumballMachine.turnCrank();
-        System.out.println(gumballMachine);
-
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.ejectQuarter();
-        System.out.println(gumballMachine);
+        monitor.report();
 
         gumballMachine.insertQuarter();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        System.out.println(gumballMachine);
+        //gumballMachine.turnCrank();
 
-        gumballMachine.refill(8);
-        System.out.println(gumballMachine);
-
-        gumballMachine.insertQuarter();
-        gumballMachine.turnCrank();
-        System.out.println(gumballMachine);
+        monitor.report();
     }
 }

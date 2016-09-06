@@ -1,1 +1,1 @@
-Head Firt Design Pattern learn test.
+Head Firt Design Pattern learning.

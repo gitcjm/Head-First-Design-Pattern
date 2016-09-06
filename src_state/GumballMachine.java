@@ -3,53 +3,23 @@
  */
 public class GumballMachine {
 
-    final static int SOLD_OUT = 0;  // 售罄
-    final static int NO_QUARTER = 1;    // 没硬币
-    final static int HAS_QUARTER = 2;   // 有硬币
-    final static int SOLD = 3;  // 正在出售糖果
-    final static int WINNER = 4;   // 赢家状态,转动曲柄参与抽奖
+    final static int SOLD_OUT = 0;
+    final static int NO_QUARTER = 1;
+    final static int HAS_QUARTER = 2;
+    final static int SOLD = 3;
+    final static int WIN = 4;   // 转动曲柄,同时参与抽奖
 
-    int state = SOLD_OUT;   // 糖果机的初始状态为售罄
+    int state = SOLD_OUT;
     int count = 0;
 
-    String location;    // 糖果机的位置,远程JVM的IP地址
-
-    public GumballMachine(String location, int count) {
-        this.location = location;
+    public GumballMachine(int count) {
         this.count = count;
         if (count > 0) {
             state = NO_QUARTER; // 待售
         }
     }
 
-    public String getLocation() {
-        return this.location;
-    }
-
-    public int getCount() {
-        return this.count;
-    }
-
-    public String getState() {
-        String result = "";
-        switch (this.state) {
-            case SOLD_OUT:
-                result = "sold out";
-                break;
-            case SOLD:
-                result = "sold";
-                break;
-            case NO_QUARTER:
-                result = "waiting for quarter";
-                break;
-            case HAS_QUARTER:
-                result = "has quarter";
-                break;
-        }
-        return result;
-    }
-
-    // 投入一枚硬币（25分钱）
+    // 投入25分钱
     public void insertQuarter() {
         switch (state) {
             case HAS_QUARTER:
@@ -65,13 +35,13 @@ public class GumballMachine {
             case SOLD:
                 System.out.println("Please wait, we're already giving you a gumball");
                 break;
-            case WINNER:
+            case WIN:
                 System.out.print("You can't insert another quarter");
                 break;
         }
     }
 
-    // 退回硬币
+    // 退回25分钱
     public void ejectQuarter() {
         switch (state) {
             case HAS_QUARTER:
@@ -87,7 +57,7 @@ public class GumballMachine {
             case SOLD:
                 System.out.println("Sorry, you already turned the crank");
                 break;
-            case WINNER:
+            case WIN:
                 System.out.print("Sorry, you already turned the crank, and already get a winning!");
                 break;
         }
@@ -110,7 +80,7 @@ public class GumballMachine {
             case SOLD:
                 System.out.println("Turning twice doesn't get you another gumball!");
                 break;
-            case WINNER:
+            case WIN:
                 System.out.println("You turned..., and get a winning!");
                 state = SOLD;
                 dispense();
@@ -140,7 +110,7 @@ public class GumballMachine {
                     state = NO_QUARTER;
                 }
                 break;
-            case WINNER:
+            case WIN:
                 System.out.println("Two gumball comes rolling out the slot");
                 count = count - 2;
                 if (count <= 0) {
@@ -153,7 +123,7 @@ public class GumballMachine {
         }
     }
 
-    // 填充糖果
+    // 重填糖果
     public void refill(int count) {
         this.count = this.count + count;
         if (count > 0) {
