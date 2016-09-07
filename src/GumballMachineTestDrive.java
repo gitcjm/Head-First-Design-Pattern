@@ -17,10 +17,7 @@ public class GumballMachineTestDrive {
         // 糖果机监视器
         GumballMonitor monitor = new GumballMonitor(gumballMachine);
 
-        monitor.report();
-
         gumballMachine.insertQuarter();
-        //gumballMachine.turnCrank();
 
         monitor.report();
     }
