@@ -1,3 +1,5 @@
+import gumballmachine.GumballMachine;
+
 /**
  * Created by cjm on 8/26/16.
  */

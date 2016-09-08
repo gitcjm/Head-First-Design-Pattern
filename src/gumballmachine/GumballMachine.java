@@ -1,3 +1,5 @@
+package gumballmachine;
+
 /**
  * Created by cjm on 8/26/16.
  */

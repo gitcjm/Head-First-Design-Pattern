@@ -1,3 +1,5 @@
+package gumballmachine;
+
 /**
  * Created by cjm on 9/6/16.
  * 糖果机远程监视器
