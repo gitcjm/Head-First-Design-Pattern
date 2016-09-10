@@ -1,3 +1,5 @@
+package mygumballremote;
+
 import java.rmi.Naming;
 
 /**

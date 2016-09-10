@@ -9,7 +9,7 @@ public class GumballMachineTestDrive {
         int count = 0;
 
         if (args.length < 2) {
-            System.out.println("gumballmachine.GumballMachine <name> <inventory>");
+            System.out.println("gumballmachine.statepattern.GumballMachine <name> <inventory>");
             System.exit(1);
         }
 

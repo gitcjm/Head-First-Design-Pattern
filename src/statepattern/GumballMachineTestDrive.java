@@ -1,4 +1,4 @@
-import gumballmachine.GumballMachine;
+package statepattern;
 
 /**
  * Created by cjm on 8/26/16.

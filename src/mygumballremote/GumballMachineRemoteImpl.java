@@ -1,3 +1,5 @@
+package mygumballremote;
+
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -187,7 +189,7 @@ public class GumballMachineRemoteImpl
         try {
             GumballMachineRemote gumballService =
                     new GumballMachineRemoteImpl("walmart", 212);
-            Naming.rebind("GumballRemote", gumballService);
+            Naming.rebind("rmi://127.0.0.1/GumballRemote", gumballService);
 
         } catch (Exception e) {
             e.printStackTrace();

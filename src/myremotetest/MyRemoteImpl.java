@@ -1,4 +1,4 @@
-package myremote;
+package myremotetest;
 
 import java.rmi.Naming;
 import java.rmi.RemoteException;
