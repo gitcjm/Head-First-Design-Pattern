@@ -6,6 +6,7 @@ import java.rmi.server.UnicastRemoteObject;
  */
 public class GumballMachine
         extends UnicastRemoteObject implements GumballMachineRemote {
+    private static final long serialVersionUID = -8527205926831936009L;
 
     final static int SOLD_OUT = 0;  // 售罄
     final static int NO_QUARTER = 1;    // 没硬币

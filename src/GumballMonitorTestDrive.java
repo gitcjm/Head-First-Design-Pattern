@@ -7,8 +7,8 @@ public class GumballMonitorTestDrive {
 
     public static void main(String[] args) {
         String[] location =
-                {"rmi://127.0.0.1/gumballmachine",
-                "rmi://127.0.0.1/gumballmachine"};
+                {"rmi://10.14.209.230/gumballmachine",
+                "rmi://10.14.209.232/gumballmachine"};
 
         GumballMonitor[] monitors = new GumballMonitor[location.length];
 
